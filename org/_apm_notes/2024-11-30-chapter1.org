@@ -10,7 +10,8 @@ tags:
   - "Math"
   - "Finance"
 usemathjax: true
-classes: wide
+toc: true
+toc_sticky: true
 ---
 #+end_export
 
