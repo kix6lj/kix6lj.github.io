@@ -1,0 +1,166 @@
+---
+title: "APM Chapter 1"
+excerpt: "第一章：CAPM模型"
+categories:
+  - "笔记"
+tags:
+  - "Math"
+  - "Finance"
+usemathjax: true
+classes: wide
+---
+
+<div id="outline-container-orgd749789" class="outline-2">
+<h2 id="orgd749789">总结</h2>
+<div class="outline-text-2" id="text-orgd749789">
+<ul class="org-ul">
+<li>组合 \(P\) 的超额收益率 \(r_p\) 可以划分成3个部分
+\[
+  r_P = \beta r_B + \alpha_P + \epsilon
+  \]
+<ul class="org-ul">
+<li>其中 \(B\) 是基准组合，\(\beta\) 定义为 \(\frac{\text{Cov}(r_P, r_B)}{\text{Var}(r_B)}\)</li>
+<li>\(\alpha\) 是 \(r_P\) 中与 \(r_B\) 不相关的部分， \(\epsilon\) 为随机波动。</li>
+</ul></li>
+<li>CAPM说明，对于有效市场，当 \(B\) 为市场组合 \(M\) 时，\(\mathbb{E}[\alpha_P]\) 总是为 \(0\)
+<ul class="org-ul">
+<li>有效市场指
+<ul class="org-ul">
+<li>所有投资者都知道超额收益率</li>
+<li>所有投资者都有夏普率 \(SR_P=\frac{f_P}{\sigma_P}\) 偏好</li>
+</ul></li>
+</ul></li>
+<li>根据CAPM，最优投资组合总是按某个比例投资市场组合\(M\)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf070fd9" class="outline-2">
+<h2 id="orgf070fd9">CAPM 推导</h2>
+<div class="outline-text-2" id="text-orgf070fd9">
+</div>
+<div id="outline-container-orge0f93a2" class="outline-3">
+<h3 id="orge0f93a2">什么是CAPM</h3>
+<div class="outline-text-3" id="text-orge0f93a2">
+<p>
+CAPM（capitcal asset pricing model，资本资产定价模型）描述了最优投资组合
+</p>
+</div>
+</div>
+<div id="outline-container-orgea3428a" class="outline-3">
+<h3 id="orgea3428a">技术推导</h3>
+<div class="outline-text-3" id="text-orgea3428a">
+</div>
+<div id="outline-container-org51976a9" class="outline-4">
+<h4 id="org51976a9">定义</h4>
+<div class="outline-text-4" id="text-org51976a9">
+<p>
+\[
+\newcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\af}{\alpha}
+\newcommand{\bt}{\beta}
+\]
+</p>
+\begin{alignat*}{2}
+& V \; &&\text{资产之间的协方差} \\
+& \sigma_{A, B} \; &&\text{组合A和B的协方差} \\
+& \vec{h} \; &&\text{投资组合对每个资产的比例}
+\end{alignat*}
+</div>
+</div>
+<div id="outline-container-org500dc56" class="outline-4">
+<h4 id="org500dc56">方差与协方差</h4>
+<div class="outline-text-4" id="text-org500dc56">
+<ul class="org-ul">
+<li>组合 \(P\) 的方差 \(\sigma_P=\vec{h}_P^TV\vec{h}_P\)</li>
+<li>组合 \(P\) 和组合 \(Q\) 的协方差 \(\sigma_{P, Q}=\sigma_{Q, P}=\vec{h}_P^TV\vec{h}_Q\)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org896b978" class="outline-4">
+<h4 id="org896b978">特征与特征组合</h4>
+<div class="outline-text-4" id="text-org896b978">
+<ul class="org-ul">
+<li>特征 \(\mathbf{\alpha}\) 为一个关于资产的向量，\(\mathbf{h}\) 在 \(\mathbf{\alpha}\) 上的暴露度为 \(\vec{h}^T \vec{\alpha}\)</li>
+<li>\(\vec{\alpha}\) 对应唯一的特征组合 \(\vec{h}\)，满足 \(\vec{h}^T\vec{\alpha}=1\)（具有单位暴露度），且方差最小
+<ul class="org-ul">
+<li>\(\vec{h}=\frac{V^{-1}\vec{\af}}{\vec{\af}^TV^{-1}\vec{\af}}\)</li>
+<li>方差 \(\sigma^2=\frac{1}{\vec{\af}^TV^{-1}\vec{\af}}\)</li>
+<li>资产相对 \(\vec{h}\) 的 \(\vec{\bt}=\frac{V\vec{h}}{\sigma^2}=\frac{\vec{\af}}{\vec{\af}^TV^{-1}\vec{\af}}=\vec{\af}\)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3013001" class="outline-4">
+<h4 id="org3013001">特殊的组合</h4>
+<div class="outline-text-4" id="text-org3013001">
+</div>
+<div id="outline-container-orgb3e229f" class="outline-5">
+<h5 id="orgb3e229f">组合C</h5>
+<div class="outline-text-5" id="text-orgb3e229f">
+<p>
+当特征为 \(\vec{e}=\{1, 1, \cdots\}\) 时，特征组合 \(C\) 为最小方差的全额投资组合，且资产相对于 \(C\) 的 \(\bt\) 为 \(1\)
+</p>
+<blockquote>
+<p>
+全额投资的意思就是 \(\sum_{n} \vec{h}_n = 1\).
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgf4aa5f9" class="outline-5">
+<h5 id="orgf4aa5f9">组合q</h5>
+<div class="outline-text-5" id="text-orgf4aa5f9">
+<p>
+当特征为超额收益率 \(\vec{f}\) 是，特征组合 \(q\) 为最大夏普率组合
+</p>
+</div>
+</div>
+<div id="outline-container-orgadc0952" class="outline-5">
+<h5 id="orgadc0952">全额组合Q</h5>
+<div class="outline-text-5" id="text-orgadc0952">
+<p>
+To be continued
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbc72167" class="outline-4">
+<h4 id="orgbc72167">全额投资组合的有效前沿</h4>
+<div class="outline-text-4" id="text-orgbc72167">
+<p>
+要求超额收益为 \(f_P\) ， 同时全额投资，最小化波动
+</p>
+\begin{alignat*}{2}
+&\text{minimize} \; &&\vec{h}^TV\vec{h} \\
+&s.t.  \; && \vec{h}^T \vec{e} = 1 \\
+&            && \vec{h}^T \vec{f} = f_P
+\end{alignat*}
+
+<p>
+求解得到
+\[
+\vec{h}_P=\left(\frac{f_Q-f_P}{f_Q-f_C} \right) \vec{h}_C+\left( \frac{f_P-f_C}{f_Q-f_C} \right) \vec{h_Q}
+\]
+</p>
+
+<p>
+组合 \(P\) 是组合 \(C\) 和组合 \(Q\) 按某个比例相加，且 \(Q\) 是曲线中夏普率最高的点
+</p>
+</div>
+</div>
+<div id="outline-container-org40771b7" class="outline-4">
+<h4 id="org40771b7">CAPM结论</h4>
+<div class="outline-text-4" id="text-org40771b7">
+<p>
+组合 \(Q\) 等于市场组合 \(M\)
+</p>
+<ul class="org-ul">
+<li>所有人都有夏普率偏好，投资组合就是一定比例的 \(Q\) 和无风险资产</li>
+<li>市场中净债务的和为0</li>
+<li>市场平均的组合就是Q</li>
+</ul>
+</div>
+</div>
+</div>
+</div>

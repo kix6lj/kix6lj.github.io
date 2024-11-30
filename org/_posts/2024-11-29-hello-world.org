@@ -2,7 +2,6 @@
 #+STARTUP: hidestars
 #+begin_export html
 ---
-layout: posts
 title: Hello World!
 excerpt: hello world
 categories:
@@ -17,7 +16,7 @@ usemathjax: true
 * Head 1
 ** Head 2-1
 *** Head3
-#+begin_src c++
+#+begin_src cpp
   printf("hello world\n");
 #+end_src
 ** Head 2-2
