@@ -1,0 +1,16 @@
+#+STARTUP: showall noindent
+#+STARTUP: hidestars
+#+begin_export html
+---
+title: "《禅与摩托车维修技术》笔记"
+excerpt: "终于读完了被众多科技行业的人推荐的哲学书"
+categories:
+  - "笔记"
+tags:
+  - Philosophy
+  - Leisure
+usemathjax: true
+---
+#+end_export
+
+挖个坑。。。
