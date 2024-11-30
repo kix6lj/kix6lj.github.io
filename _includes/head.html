@@ -1,5 +1,22 @@
 <meta charset="utf-8">
 
+{% if page.usemathjax %}
+<script>
+MathJax = {
+  tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+{% endif %}
+
 {% include seo.html %}
 
 {% unless site.atom_feed.hide %}

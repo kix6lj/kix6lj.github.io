@@ -1,2 +1,8 @@
 source "https://rubygems.org"
-gemspec
+
+gem "jekyll"
+gem "jekyll-paginate"
+gem "logger"
+gem "minimal-mistakes-jekyll"
+
+
