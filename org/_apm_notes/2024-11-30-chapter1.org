@@ -30,6 +30,9 @@ toc_sticky: true
     - 所有投资者都知道超额收益率
     - 所有投资者都有夏普率 $SR_P=\frac{f_P}{\sigma_P}$ 偏好
 - 根据CAPM，最优投资组合总是按某个比例投资市场组合$M$
+** 有什么问题
+- 超额收益率无法准确预测（至少不能被所有人准确预测）
+- 投资者不会对夏普率有同样的偏好。
   
 * CAPM 推导
 ** 什么是CAPM
@@ -76,7 +79,7 @@ e_q & = \vec{h_q}^T \vec{e} = \left(\frac{V^{-1}\vec{f}}{\vec{f}^TV^{-1}\vec{f}}
 &= \frac{\sigma_C^2}{\sigma_q^2} \vec{f}^T\vec{h_C} = f_C \frac{\sigma_C^2}{\sigma_q^2} \\
 \end{align*}
 
-把 $h_q$ 整体乘 $\frac{1}{e_q}$ 就能得到全额投资组合 Q，组合Q的超额收益率 $f_Q=\frac{1}{e_q}$ 。
+把 $h_q$ 整体乘 $\frac{1}{e_q}$ 就能得到全额投资组合 Q，组合Q的超额收益率 $f_Q=\frac{1}{e_q}$ （这里需要假设 $f_C>0$）。
 
 同样的，组合Q对应的特征为 $e_q \vec{f} = \frac{1}{f_Q} \vec{f}$，从前面的推导可以知道，资产相对与特征组合 $h$ 的 $\vec{\beta}$ 等于特征 $\vec{\alpha}$。于是资产相对于组合 $Q$ 的 $\vec{\beta}=\frac{1}{f_Q} \vec{f}$，即 $\vec{f} = f_Q \vec{\beta}$，即资产的超额收益与其相对 $Q$ 的 $\vec{\beta}$ 成正比。
 
