@@ -64,11 +64,26 @@ $$
 **** 组合q
 当特征为超额收益率 $\vec{f}$ 是，特征组合q为最大夏普率组合，有
 $$
-h_q = \frac{V^{-1}\vec{f}}{\vec{f}^TV^{-1}\vec{f}}
+\vec{h}_q = \frac{V^{-1}\vec{f}}{\vec{f}^TV^{-1}\vec{f}}
 $$
 
 **** 全额组合Q
 组合q在特征 $\vec{e}$ 上的暴露度为
+\begin{align*}
+e_q & = \vec{h_q}^T \vec{e} = \left(\frac{V^{-1}\vec{f}}{\vec{f}^TV^{-1}\vec{f}}\right)^T \vec{e}\\
+&= \frac{\vec{f}^TV^{-1}\vec{e}}{\sigma_q^2} \\
+&= \frac{\vec{f}^T \sigma_C^2}{\sigma_q^2 } \cdot \frac{V^{-1}\vec{e}}{\sigma_C^2} \\
+&= \frac{\sigma_C^2}{\sigma_q^2} \vec{f}^T\vec{h_C} = f_C \frac{\sigma_C^2}{\sigma_q^2} \\
+\end{align*}
+
+把 $h_q$ 整体乘 $\frac{1}{e_q}$ 就能得到全额投资组合 Q，组合Q的超额收益率 $f_Q=\frac{1}{e_q}$ 。
+
+同样的，组合Q对应的特征为 $e_q \vec{f} = \frac{1}{f_Q} \vec{f}$，从前面的推导可以知道，资产相对与特征组合 $h$ 的 $\vec{\beta}$ 等于特征 $\vec{\alpha}$。于是资产相对于组合 $Q$ 的 $\vec{\beta}=\frac{1}{f_Q} \vec{f}$，即 $\vec{f} = f_Q \vec{\beta}$，即资产的超额收益与其相对 $Q$ 的 $\vec{\beta}$ 成正比。
+
+对于任意组合 $P$，有 $f_P=\vec{f}^T \vec{h}_P = f_Q \vec{\beta}^T \vec{h}_P = f_Q \beta_{\text{P 相对 Q}}$，即组合 $P$ 的 $\alpha_P=0$，也就是相对Q没有主动收益率。
+
+下面说明组合Q就是市场组合M。
+
 *** 全额投资组合的有效前沿
 要求超额收益为 $f_P$ ， 同时全额投资，最小化波动
 \begin{alignat*}{2}

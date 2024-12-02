@@ -115,20 +115,44 @@ CAPM（capitcal asset pricing model，资本资产定价模型）描述了最优
 <p>
 当特征为超额收益率 \(\vec{f}\) 是，特征组合q为最大夏普率组合，有
 \[
-h_q = \frac{V^{-1}\vec{f}}{\vec{f}^TV^{-1}\vec{f}}
+\vec{h}_q = \frac{V^{-1}\vec{f}}{\vec{f}^TV^{-1}\vec{f}}
 \]
 </p>
 </div>
 </div>
+
 <div id="outline-container-orgadc0952" class="outline-5">
 <h5 id="orgadc0952">全额组合Q</h5>
 <div class="outline-text-5" id="text-orgadc0952">
 <p>
 组合q在特征 \(\vec{e}\) 上的暴露度为
 </p>
+\begin{align*}
+e_q & = \vec{h_q}^T \vec{e} = \left(\frac{V^{-1}\vec{f}}{\vec{f}^TV^{-1}\vec{f}}\right)^T \vec{e}\\
+&= \frac{\vec{f}^TV^{-1}\vec{e}}{\sigma_q^2} \\
+&= \frac{\vec{f}^T \sigma_C^2}{\sigma_q^2 } \cdot \frac{V^{-1}\vec{e}}{\sigma_C^2} \\
+&= \frac{\sigma_C^2}{\sigma_q^2} \vec{f}^T\vec{h_C} = f_C \frac{\sigma_C^2}{\sigma_q^2} \\
+\end{align*}
+
+<p>
+把 \(h_q\) 整体乘 \(\frac{1}{e_q}\) 就能得到全额投资组合 Q，组合Q的超额收益率 \(f_Q=\frac{1}{e_q}\) 。
+</p>
+
+<p>
+同样的，组合Q对应的特征为 \(e_q \vec{f} = \frac{1}{f_Q} \vec{f}\)，从前面的推导可以知道，资产相对与特征组合 \(h\) 的 \(\vec{\beta}\) 等于特征 \(\vec{\alpha}\)。于是资产相对于组合 \(Q\) 的 \(\vec{\beta}=\frac{1}{f_Q} \vec{f}\)，即 \(\vec{f} = f_Q \vec{\beta}\)，即资产的超额收益与其相对 \(Q\) 的 \(\vec{\beta}\) 成正比。
+</p>
+
+<p>
+对于任意组合 \(P\)，有 \(f_P=\vec{f}^T \vec{h}_P = f_Q \vec{\beta}^T \vec{h}_P = f_Q \beta_{\text{P 相对 Q}}\)，即组合 \(P\) 的 \(\alpha_P=0\)，也就是相对Q没有主动收益率。
+</p>
+
+<p>
+下面说明组合Q就是市场组合M。
+</p>
 </div>
 </div>
 </div>
+
 <div id="outline-container-orgbc72167" class="outline-4">
 <h4 id="orgbc72167">全额投资组合的有效前沿</h4>
 <div class="outline-text-4" id="text-orgbc72167">
